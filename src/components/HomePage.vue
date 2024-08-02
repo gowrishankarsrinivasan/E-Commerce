@@ -9,7 +9,7 @@
         <img class="profile-img" :src="img" alt="Profile Image" />
       </div>
     </nav>
-
+    <!-- 
     <section class="content">
       <div class="split left">
         <div class="text">
@@ -33,7 +33,7 @@
         </div>
         <img class="shoes" :src="img2" alt="Shoes Image" />
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -41,8 +41,11 @@
 import img from '../assets/car.jpg';
 import img2 from '../assets/sam.jpg';
 
+
 export default {
-  name: 'HomeComponent',
+  
+  name: 'NavbarComponent',
+
   data() {
     return {
       img,
@@ -56,10 +59,11 @@ export default {
 .home {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 10vh;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   overflow: hidden;
+  background-color: black;
 }
 
 .fas {
@@ -68,6 +72,7 @@ export default {
 
 .navbar>div {
   padding: 0 30px;
+  color: white;
 }
 
 .logo {
@@ -88,14 +93,20 @@ export default {
   display: flex;
   align-items: center;
 }
-
+ 
 .profile-img {
   width: 35px;
   height: 35px;
   object-fit: cover;
   border-radius: 50%;
 }
+h2 {
+  font-size: 1.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
 
+/*
 .content {
   position: relative;
   height: 100%;
@@ -133,11 +144,6 @@ h1 {
   margin: 0;
 }
 
-h2 {
-  font-size: 1.2em;
-  margin: 0;
-  text-transform: uppercase;
-}
 
 p {
   font-size: 1em;
@@ -156,5 +162,6 @@ img.shoes {
   width: 80%;
   max-width: 300px;
   height: auto;
-}
+} */
+
 </style>

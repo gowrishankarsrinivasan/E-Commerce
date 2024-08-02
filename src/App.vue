@@ -1,27 +1,38 @@
 <template>
   <div class="App">
-
-    <HomeComponent />
+    <NavbarComponent :timeline="timeline" />
+    <HomeComponent :timeline="timeline" />
   </div>
 </template>
 
 <script>
-import HomeComponent from './components/HomePage.vue'; // Import HomeComponent correctly
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { gsap } from 'gsap';
+import HomeComponent from './components/Home.vue';
+import NavbarComponent from './components/HomePage.vue'; // Ensure correct component import
 
 export default {
   components: {
-    HomeComponent // Register the component
+    NavbarComponent,
+    HomeComponent
+  },
+  data() {
+    return {
+      timeline: gsap.timeline()
+    };
+  },
+  mounted() {
+    AOS.init();
   }
-}
+};
 </script>
 
 <style scoped>
 * {
   padding: 0;
   margin: 0;
-  /* height: 100vh;
-  width: 100vw; */
   box-sizing: border-box;
-  background-color: aqua;
+  height: auto;
 }
 </style>
