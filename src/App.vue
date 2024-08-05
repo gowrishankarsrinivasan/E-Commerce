@@ -10,8 +10,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { gsap } from 'gsap';
 import HomeComponent from './components/Home.vue';
-import NavbarComponent from './components/HomePage.vue'; // Ensure correct component import
-
+import NavbarComponent from './components/HomePage.vue'; 
 export default {
   components: {
     NavbarComponent,
